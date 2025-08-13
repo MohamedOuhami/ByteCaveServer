@@ -88,12 +88,12 @@ CMakeFiles/ByteCaveServer.dir/all: CMakeFiles/ByteCaveServer_autogen_timestamp_d
 CMakeFiles/ByteCaveServer.dir/all: CMakeFiles/ByteCaveServer_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=1,2,3,4 "Built target ByteCaveServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target ByteCaveServer"
 .PHONY : CMakeFiles/ByteCaveServer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ByteCaveServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ByteCaveServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/ByteCaveServer.dir/rule
@@ -105,7 +105,7 @@ ByteCaveServer: CMakeFiles/ByteCaveServer.dir/rule
 # codegen rule for target.
 CMakeFiles/ByteCaveServer.dir/codegen: CMakeFiles/ByteCaveServer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target ByteCaveServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target ByteCaveServer"
 .PHONY : CMakeFiles/ByteCaveServer.dir/codegen
 
 # clean rule for target.
@@ -152,7 +152,7 @@ CMakeFiles/ByteCaveServer_autogen_timestamp_deps.dir/clean:
 CMakeFiles/ByteCaveServer_autogen.dir/all: CMakeFiles/ByteCaveServer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer_autogen.dir/build.make CMakeFiles/ByteCaveServer_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer_autogen.dir/build.make CMakeFiles/ByteCaveServer_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=5 "Built target ByteCaveServer_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=6 "Built target ByteCaveServer_autogen"
 .PHONY : CMakeFiles/ByteCaveServer_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -169,7 +169,7 @@ ByteCaveServer_autogen: CMakeFiles/ByteCaveServer_autogen.dir/rule
 # codegen rule for target.
 CMakeFiles/ByteCaveServer_autogen.dir/codegen: CMakeFiles/ByteCaveServer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer_autogen.dir/build.make CMakeFiles/ByteCaveServer_autogen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=5 "Finished codegen for target ByteCaveServer_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/CMakeFiles --progress-num=6 "Finished codegen for target ByteCaveServer_autogen"
 .PHONY : CMakeFiles/ByteCaveServer_autogen.dir/codegen
 
 # clean rule for target.

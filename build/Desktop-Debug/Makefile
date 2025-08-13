@@ -248,6 +248,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+services/bytecaveserver.o: services/bytecaveserver.cpp.o
+.PHONY : services/bytecaveserver.o
+
+# target to build an object file
+services/bytecaveserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o
+.PHONY : services/bytecaveserver.cpp.o
+
+services/bytecaveserver.i: services/bytecaveserver.cpp.i
+.PHONY : services/bytecaveserver.i
+
+# target to preprocess a source file
+services/bytecaveserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.i
+.PHONY : services/bytecaveserver.cpp.i
+
+services/bytecaveserver.s: services/bytecaveserver.cpp.s
+.PHONY : services/bytecaveserver.s
+
+# target to generate assembly for a file
+services/bytecaveserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ByteCaveServer.dir/build.make CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.s
+.PHONY : services/bytecaveserver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -269,6 +293,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... services/bytecaveserver.o"
+	@echo "... services/bytecaveserver.i"
+	@echo "... services/bytecaveserver.s"
 .PHONY : help
 
 
