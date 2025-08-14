@@ -2,6 +2,9 @@
 
 #include <asio.hpp>
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 // This is the constructor for the ByteCaveServer, which takes the port as an argument
 // After that, we got what's called "Initializers list" which run before the constructor body
@@ -42,19 +45,45 @@ void ByteCaveServer::acceptSocketsAsync(){
     // As paremeters, we have the ec, which is inserted implicitely by the async_accept
 
     acceptor.async_accept(*socket,[this,socket](std::error_code ec){
-        // Add the new socket into the clients
-        clients.push_back(socket);
 
         // If there is no ec, means that the connection was successful
         if (!ec){
-            std::cout << "Client connected from " << socket->remote_endpoint() << std::endl;
-            sendMessage(socket,"Hello from ByteCaveServer!\n");
+
+            // Here, we need to get the username
+            // Can I send the username with the socket ??
+            std::cout << "My Client connected from " << socket->remote_endpoint() << std::endl;
+
+            // Wait for the username message
+            // We created the shared_ptr for the usernamebuff to stay alive ahead of the lambda
+            auto username_buff = make_shared<array<char,64>>();
+
+
+            // Async_accept is an async function, so we need to make sure that the processing of waiting the username is non-blocking
+
+            cout << "Getting the username" << endl;
+            socket->async_read_some(asio::buffer(*username_buff),[this,username_buff,socket](error_code ec,size_t len){
+
+                if (!ec){
+                    string username(username_buff->data(),len);
+
+                    cout << "Got the username " << username << endl;
+
+                    // Added the new user to the vector of connected users
+                    clients[username] = socket;
+
+                    sendMessage(socket,"Hello from ByteCaveServer!\n");
+                }
+
+                else {
+                    cout << "There was an error " << ec.message();
+                }
+            });
+
         }
 
         // Rewait for another connection
         acceptSocketsAsync();
     });
-
 }
 
 // Implementation of the sending messages to clients
@@ -68,6 +97,6 @@ void ByteCaveServer::readMessage(){
 }
 
 // Get the number of clients
-std::vector<std::shared_ptr<asio::ip::tcp::socket>> ByteCaveServer::getConnectedClients(){
+unordered_map<string,socketPtr> ByteCaveServer::getConnectedClients(){
     return clients;
 }

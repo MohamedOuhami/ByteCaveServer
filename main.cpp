@@ -3,13 +3,13 @@
 #include "bytecaveserver.h"
 #include <iostream>
 
+#include "../include/"
 // Declare functions used in the main script
 void getUserInput(ByteCaveServer &byteCaveServer);
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-
 
     // Instantiating the ByteCaveServer
     ByteCaveServer byteCaveServer(8080);
@@ -50,7 +50,7 @@ void getUserInput(ByteCaveServer& byteCaveServer) {
             if (operation == "1"){
 
                 // Send message through all the sockets
-                for(auto& socket : byteCaveServer.getConnectedClients()){
+                for(auto& [username,socket] : byteCaveServer.getConnectedClients()){
                     if (socket && socket->is_open()){
                         // Send a message to all the open sockets
                         byteCaveServer.sendMessage(socket,"Hello from the server\n");
@@ -61,7 +61,7 @@ void getUserInput(ByteCaveServer& byteCaveServer) {
             else if (operation == "2"){
 
                 size_t openClients = 0;
-                for(auto &socket : byteCaveServer.getConnectedClients()){
+                for(auto &[username,socket]: byteCaveServer.getConnectedClients()){
                     std::cout << "In the vector, you have the following sockets\n";
                     if (socket && socket->is_open()){
                         std::cout << socket << ", its open status :" << socket->is_open();
