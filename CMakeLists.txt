@@ -16,6 +16,8 @@ add_executable(ByteCaveServer
   main.cpp
   interfaces/IByteCaveServer.h
   services/bytecaveserver.h services/bytecaveserver.cpp
+  structs/Chatroom.h
+  structs/User.h
 
 )
 target_link_libraries(ByteCaveServer Qt${QT_VERSION_MAJOR}::Core)
@@ -24,6 +26,9 @@ target_include_directories(ByteCaveServer
   ${CMAKE_SOURCE_DIR}/include/asio
   ${CMAKE_SOURCE_DIR}/interfaces
   ${CMAKE_SOURCE_DIR}/services
+  ${CMAKE_SOURCE_DIR}/structs
+  /home/v01d/dev/libs/include/json/include
+
 )
 
 

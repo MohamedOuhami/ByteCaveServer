@@ -93,6 +93,7 @@
 		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces",
 		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services",
 		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs",
+		"/home/v01d/dev/libs/include/json/include",
 		"/usr/include/qt",
 		"/usr/include/qt/QtCore",
 		"/usr/lib/qt/mkspecs/linux-g++",

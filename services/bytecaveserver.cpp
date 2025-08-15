@@ -1,9 +1,5 @@
 #include "bytecaveserver.h"
 
-#include <asio.hpp>
-#include <iostream>
-#include <string>
-
 using namespace std;
 
 // This is the constructor for the ByteCaveServer, which takes the port as an argument
@@ -51,7 +47,7 @@ void ByteCaveServer::acceptSocketsAsync(){
 
             // Here, we need to get the username
             // Can I send the username with the socket ??
-            std::cout << "My Client connected from " << socket->remote_endpoint() << std::endl;
+            cout << "My Client connected from " << socket->remote_endpoint() << std::endl;
 
             // Wait for the username message
             // We created the shared_ptr for the usernamebuff to stay alive ahead of the lambda
@@ -60,18 +56,34 @@ void ByteCaveServer::acceptSocketsAsync(){
 
             // Async_accept is an async function, so we need to make sure that the processing of waiting the username is non-blocking
 
-            cout << "Getting the username" << endl;
+
             socket->async_read_some(asio::buffer(*username_buff),[this,username_buff,socket](error_code ec,size_t len){
 
                 if (!ec){
                     string username(username_buff->data(),len);
 
-                    cout << "Got the username " << username << endl;
+                    // Generate the new uuid
+                    boost::uuids::random_generator randomGen;
+                    boost::uuids::uuid uuid = randomGen();
 
-                    // Added the new user to the vector of connected users
-                    clients[username] = socket;
+                    // Create the new User
+                    User newUser {uuid,username,socket};
 
-                    sendMessage(socket,"Hello from ByteCaveServer!\n");
+                    cout << "Creating new User with username : " << newUser.username
+                         << " and a uuid : "
+                         << newUser.uuid
+                         << " and socket " << newUser.socketPtr
+                         << endl;
+
+                    // Add the new user to the allClients
+                    allUsers.push_back(newUser);
+
+                    // Send the new UUID to the client
+                    sendMessage(socket,boost::uuids::to_string(uuid));
+
+                    for (auto user : allUsers){
+                        readMessage(user);
+                    }
                 }
 
                 else {
@@ -91,12 +103,98 @@ void ByteCaveServer::sendMessage(std::shared_ptr<asio::ip::tcp::socket> socket,s
     asio::write(*socket,asio::buffer(message));
 }
 
+// Implementation of the sending messages to clients
+void ByteCaveServer::sendMessage(std::shared_ptr<asio::ip::tcp::socket> socket,boost::uuids::uuid uuid){
+    asio::write(*socket,asio::buffer(uuid));
+}
+
 // Implementation of the reading messages coming from clients
-void ByteCaveServer::readMessage(){
+void ByteCaveServer::readMessage(User user){
+    // Read from the buffer
 
+    auto buffer = make_shared<array<char,1024>>();
+
+    auto &socket = *user.socketPtr;
+
+    socket.async_read_some(
+        // The buffer to read to
+        asio::buffer(*buffer),
+        // The callback to perform when receiving a message
+        [this,buffer,user](error_code ec,size_t length){
+            if(!ec){
+
+                // If the
+                string msg(buffer->data(),length);
+
+                // Find the command end
+                auto commandEnd = msg.find("\n");
+                if(commandEnd != string::npos){
+                    // Stripe the command name from the message
+                    string command = msg.substr(0,commandEnd);
+
+                    // Find the size line
+                    auto sizeEnd = msg.find("\n",commandEnd+1);
+                    if(sizeEnd != string::npos){
+                        size_t jsonSize = stoul(msg.substr(commandEnd+1,sizeEnd-commandEnd+1));
+
+                        // Get the paylaod
+                        string jsonPayload = msg.substr(sizeEnd+1);
+
+                        // Make sure that we have no missing or incomplete data
+                        if (jsonPayload.size() >= jsonSize){
+
+                            // Parse the data
+                            auto j = json::parse(jsonPayload.substr(0,jsonSize));
+
+                            // Check the type of command
+                            if (command == "CREATE_CHATROOM"){
+
+                                string name = j["name"];
+                                string description = j["description"];
+                                string owner_uuid = j["chatroomClients"][0];
+
+                                cout << "Chatroom name : " << j["name"] << endl;
+                                cout << "Chatroom description : " << j["description"] << endl;
+                                cout << "Chatroom owner : " << j["chatroomClients"][0] << endl;
+
+                                // Parse the owner uuid string to uuid
+                                boost::uuids::string_generator generator;
+                                boost::uuids::uuid id = generator(owner_uuid);
+
+                                // Find the user using the uuid
+                                auto it = find_if(allUsers.begin(),allUsers.end(),
+                                                  [&id](const User& user){
+                                                      return user.uuid == id;
+                                });
+
+                                if (it != allUsers.end()){
+                                    User& foundUser = *it;
+                                    cout << "Found the user " << foundUser.username;
+
+                                    // Instantiate a new Chatroom
+                                    Chatroom newChatroom {name,description};
+                                    newChatroom.connectedUsers.push_back(foundUser);
+
+                                    allChatrooms.push_back(newChatroom);
+                                }
+                                else {
+                                    cout << "Could not find the user";
+                                }
+
+
+                            }
+
+
+                        }
+                    }
+                }
+
+                // Redo the loop
+                readMessage(user);
+            }
+            else {
+                // Return that there was an error
+            }
+        });
 }
 
-// Get the number of clients
-unordered_map<string,socketPtr> ByteCaveServer::getConnectedClients(){
-    return clients;
-}

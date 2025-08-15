@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DQT_CORE_LIB
 
-CXX_INCLUDES = -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/ByteCaveServer_autogen/include -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++
+CXX_INCLUDES = -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/build/Desktop-Debug/ByteCaveServer_autogen/include -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services -I/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs -I/home/v01d/dev/libs/include/json/include -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++
 
 CXX_FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
 

@@ -863,4 +863,72 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: \
  /usr/include/boost/uuid/time_generator_v6.hpp \
  /usr/include/boost/uuid/time_generator_v7.hpp \
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h \
+ /home/v01d/dev/libs/include/json/include/nlohmann/json.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/adl_serializer.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/abi_macros.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/conversions/from_json.hpp \
+ /usr/include/c++/15.1.1/forward_list \
+ /usr/include/c++/15.1.1/bits/forward_list.h \
+ /usr/include/c++/15.1.1/bits/forward_list.tcc \
+ /usr/include/c++/15.1.1/map /usr/include/c++/15.1.1/bits/stl_tree.h \
+ /usr/include/c++/15.1.1/bits/stl_map.h \
+ /usr/include/c++/15.1.1/bits/stl_multimap.h \
+ /usr/include/c++/15.1.1/valarray \
+ /usr/include/c++/15.1.1/bits/valarray_array.h \
+ /usr/include/c++/15.1.1/bits/valarray_array.tcc \
+ /usr/include/c++/15.1.1/bits/valarray_before.h \
+ /usr/include/c++/15.1.1/bits/slice_array.h \
+ /usr/include/c++/15.1.1/bits/valarray_after.h \
+ /usr/include/c++/15.1.1/bits/gslice.h \
+ /usr/include/c++/15.1.1/bits/gslice_array.h \
+ /usr/include/c++/15.1.1/bits/mask_array.h \
+ /usr/include/c++/15.1.1/bits/indirect_array.h \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/exceptions.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/value_t.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/macro_scope.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/detected.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/void_t.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/string_escape.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/input/position_t.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/cpp_future.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/type_traits.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/call_std/end.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/json_fwd.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/string_concat.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/identity_tag.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/std_fs.hpp \
+ /usr/include/c++/15.1.1/filesystem /usr/include/c++/15.1.1/bits/fs_fwd.h \
+ /usr/include/c++/15.1.1/bits/fs_path.h /usr/include/c++/15.1.1/iomanip \
+ /usr/include/c++/15.1.1/bits/quoted_string.h \
+ /usr/include/c++/15.1.1/codecvt /usr/include/c++/15.1.1/bits/fs_dir.h \
+ /usr/include/c++/15.1.1/bits/fs_ops.h /usr/include/c++/15.1.1/optional \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/conversions/to_json.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/string_utils.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/byte_container_with_subtype.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/hash.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/input/binary_reader.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/input/input_adapters.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/input/json_sax.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/input/lexer.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/meta/is_sax.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/input/parser.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/json_custom_base_class.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/json_pointer.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/json_ref.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/output/binary_writer.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/output/output_adapters.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/output/serializer.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/conversions/to_chars.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/ordered_map.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/detail/macro_unscope.hpp \
+ /home/v01d/dev/libs/include/json/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h \
  /usr/include/c++/15.1.1/iostream

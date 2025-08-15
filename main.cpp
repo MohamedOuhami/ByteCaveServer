@@ -2,8 +2,8 @@
 #include <QTimer>
 #include "bytecaveserver.h"
 #include <iostream>
+#include <User.h>
 
-#include "../include/"
 // Declare functions used in the main script
 void getUserInput(ByteCaveServer &byteCaveServer);
 
@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
     // The sender here is the timer object of type QTimer that we instantiated
     // The signal that it is going to send is a timeout signal
     // And the function that It will run, the [&] captures, means to capture all local variables by reference
+
+
     QObject::connect(&timer,&QTimer::timeout,[&](){
         byteCaveServer.pollContext();
     });
@@ -50,10 +52,10 @@ void getUserInput(ByteCaveServer& byteCaveServer) {
             if (operation == "1"){
 
                 // Send message through all the sockets
-                for(auto& [username,socket] : byteCaveServer.getConnectedClients()){
-                    if (socket && socket->is_open()){
+                for(User user : byteCaveServer.allUsers){
+                    if (user.socketPtr && user.socketPtr->is_open()){
                         // Send a message to all the open sockets
-                        byteCaveServer.sendMessage(socket,"Hello from the server\n");
+                        byteCaveServer.sendMessage(user.socketPtr,"Hello from the server\n");
                     }
                 }
 
@@ -61,10 +63,10 @@ void getUserInput(ByteCaveServer& byteCaveServer) {
             else if (operation == "2"){
 
                 size_t openClients = 0;
-                for(auto &[username,socket]: byteCaveServer.getConnectedClients()){
+                for(auto user : byteCaveServer.allUsers){
                     std::cout << "In the vector, you have the following sockets\n";
-                    if (socket && socket->is_open()){
-                        std::cout << socket << ", its open status :" << socket->is_open();
+                    if (user.socketPtr && user.socketPtr->is_open()){
+                        std::cout << user.socketPtr << ", its open status :" << user.socketPtr->is_open();
                         openClients++;
                     }
                 }

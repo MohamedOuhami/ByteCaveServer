@@ -3,7 +3,13 @@
 
 #include <IByteCaveServer.h>
 #include <asio.hpp>
+#include <vector>
+#include <boost/uuid.hpp>
+#include <nlohmann/json.hpp>
+#include <Chatroom.h>
+#include <iostream>
 
+using json = nlohmann::json;
 using namespace std;
 using asio::ip::tcp;
 
@@ -25,10 +31,18 @@ public:
     // Method to send Messages to clients
     void sendMessage(std::shared_ptr<asio::ip::tcp::socket> socket,std::string message) override;
 
-    // Method to read messages from clients
-    void readMessage() override;
+    // Method to send Messages to clients
+    void sendMessage(std::shared_ptr<asio::ip::tcp::socket> socket,boost::uuids::uuid uuid) override;
 
-    unordered_map<string,socketPtr> getConnectedClients();
+    // Method to read messages from clients
+    void readMessage(User user) override;
+
+    // Clients is a vector of Users that has a uuid, username and a shared_ptr to the socket
+    vector<User> allUsers;
+
+    vector<Chatroom> allChatrooms;
+
+    // A vector of chatrooms
 
 // Setup the private members of the Server
 private:
@@ -36,9 +50,7 @@ private:
     asio::ip::tcp::acceptor acceptor;
     unsigned short port;
 
-    // Create a vector of shared pointers of sockets to make the sockets live beyond the scope of the function that accepted It
-    // Clients is a vector of a hashed map of usernames and sockets
-    unordered_map<string,socketPtr> clients;
+
 
 
 };
