@@ -62,6 +62,18 @@
 			"MU",
 			"3BYFHCGL5U/moc_bytecaveserver.cpp",
 			null
+		],
+		[
+			"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h",
+			"MU",
+			"DN6AR5NCAW/moc_Chatroom.cpp",
+			null
+		],
+		[
+			"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h",
+			"MU",
+			"DN6AR5NCAW/moc_User.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -80,6 +92,7 @@
 		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio",
 		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces",
 		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services",
+		"/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs",
 		"/usr/include/qt",
 		"/usr/include/qt/QtCore",
 		"/usr/lib/qt/mkspecs/linux-g++",

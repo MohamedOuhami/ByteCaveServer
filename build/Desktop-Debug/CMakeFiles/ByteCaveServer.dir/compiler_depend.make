@@ -9,6 +9,8 @@ ByteCaveServer_autogen/timestamp: /home/v01d/Documents/Programming/PersonalProje
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/main.cpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h \
+  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h \
+  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h \
   /usr/bin/cmake \
   /usr/lib/cmake/Qt5/Qt5Config.cmake \
   /usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
@@ -505,6 +507,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/write_at.hpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces/IByteCaveServer.h \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h \
+  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -541,15 +544,25 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/bits/fcntl.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
   /usr/include/bits/getopt_core.h \
   /usr/include/bits/getopt_posix.h \
   /usr/include/bits/in.h \
   /usr/include/bits/ioctl-types.h \
   /usr/include/bits/ioctls.h \
+  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/mathcalls.h \
   /usr/include/bits/netdb.h \
   /usr/include/bits/poll.h \
   /usr/include/bits/posix1_lim.h \
@@ -652,6 +665,56 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/cxx_composite.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/uuid.hpp \
+  /usr/include/boost/uuid/basic_random_generator.hpp \
+  /usr/include/boost/uuid/detail/basic_name_generator.hpp \
+  /usr/include/boost/uuid/detail/chacha20.hpp \
+  /usr/include/boost/uuid/detail/config.hpp \
+  /usr/include/boost/uuid/detail/endian.hpp \
+  /usr/include/boost/uuid/detail/hash_mix.hpp \
+  /usr/include/boost/uuid/detail/md5.hpp \
+  /usr/include/boost/uuid/detail/numeric_cast.hpp \
+  /usr/include/boost/uuid/detail/random_device.hpp \
+  /usr/include/boost/uuid/detail/random_provider.hpp \
+  /usr/include/boost/uuid/detail/sha1.hpp \
+  /usr/include/boost/uuid/detail/static_assert.hpp \
+  /usr/include/boost/uuid/detail/to_chars.hpp \
+  /usr/include/boost/uuid/detail/uuid_x86.ipp \
+  /usr/include/boost/uuid/name_generator.hpp \
+  /usr/include/boost/uuid/name_generator_md5.hpp \
+  /usr/include/boost/uuid/name_generator_sha1.hpp \
+  /usr/include/boost/uuid/namespaces.hpp \
+  /usr/include/boost/uuid/nil_generator.hpp \
+  /usr/include/boost/uuid/random_generator.hpp \
+  /usr/include/boost/uuid/string_generator.hpp \
+  /usr/include/boost/uuid/time_generator.hpp \
+  /usr/include/boost/uuid/time_generator_v1.hpp \
+  /usr/include/boost/uuid/time_generator_v6.hpp \
+  /usr/include/boost/uuid/time_generator_v7.hpp \
+  /usr/include/boost/uuid/uuid.hpp \
+  /usr/include/boost/uuid/uuid_clock.hpp \
+  /usr/include/boost/uuid/uuid_generators.hpp \
+  /usr/include/boost/uuid/uuid_io.hpp \
   /usr/include/c++/15.1.1/algorithm \
   /usr/include/c++/15.1.1/any \
   /usr/include/c++/15.1.1/array \
@@ -674,6 +737,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/bits/char_traits.h \
   /usr/include/c++/15.1.1/bits/charconv.h \
   /usr/include/c++/15.1.1/bits/chrono.h \
+  /usr/include/c++/15.1.1/bits/codecvt.h \
   /usr/include/c++/15.1.1/bits/concept_check.h \
   /usr/include/c++/15.1.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
@@ -694,8 +758,11 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/bits/list.tcc \
   /usr/include/c++/15.1.1/bits/locale_classes.h \
   /usr/include/c++/15.1.1/bits/locale_classes.tcc \
+  /usr/include/c++/15.1.1/bits/locale_conv.h \
   /usr/include/c++/15.1.1/bits/locale_facets.h \
   /usr/include/c++/15.1.1/bits/locale_facets.tcc \
+  /usr/include/c++/15.1.1/bits/locale_facets_nonio.h \
+  /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
   /usr/include/c++/15.1.1/bits/localefwd.h \
   /usr/include/c++/15.1.1/bits/memory_resource.h \
   /usr/include/c++/15.1.1/bits/memoryfwd.h \
@@ -710,12 +777,15 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/bits/postypes.h \
   /usr/include/c++/15.1.1/bits/predefined_ops.h \
   /usr/include/c++/15.1.1/bits/ptr_traits.h \
+  /usr/include/c++/15.1.1/bits/random.h \
+  /usr/include/c++/15.1.1/bits/random.tcc \
   /usr/include/c++/15.1.1/bits/range_access.h \
   /usr/include/c++/15.1.1/bits/refwrap.h \
   /usr/include/c++/15.1.1/bits/requires_hosted.h \
   /usr/include/c++/15.1.1/bits/shared_ptr.h \
   /usr/include/c++/15.1.1/bits/shared_ptr_atomic.h \
   /usr/include/c++/15.1.1/bits/shared_ptr_base.h \
+  /usr/include/c++/15.1.1/bits/specfun.h \
   /usr/include/c++/15.1.1/bits/sstream.tcc \
   /usr/include/c++/15.1.1/bits/std_abs.h \
   /usr/include/c++/15.1.1/bits/std_function.h \
@@ -761,6 +831,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/chrono \
   /usr/include/c++/15.1.1/climits \
   /usr/include/c++/15.1.1/clocale \
+  /usr/include/c++/15.1.1/cmath \
   /usr/include/c++/15.1.1/compare \
   /usr/include/c++/15.1.1/concepts \
   /usr/include/c++/15.1.1/condition_variable \
@@ -793,6 +864,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/iterator \
   /usr/include/c++/15.1.1/limits \
   /usr/include/c++/15.1.1/list \
+  /usr/include/c++/15.1.1/locale \
   /usr/include/c++/15.1.1/map \
   /usr/include/c++/15.1.1/memory \
   /usr/include/c++/15.1.1/mutex \
@@ -804,6 +876,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/pstl/glue_memory_defs.h \
   /usr/include/c++/15.1.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
+  /usr/include/c++/15.1.1/random \
   /usr/include/c++/15.1.1/ratio \
   /usr/include/c++/15.1.1/sstream \
   /usr/include/c++/15.1.1/stdexcept \
@@ -812,8 +885,21 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/string \
   /usr/include/c++/15.1.1/string_view \
   /usr/include/c++/15.1.1/system_error \
+  /usr/include/c++/15.1.1/tr1/bessel_function.tcc \
+  /usr/include/c++/15.1.1/tr1/beta_function.tcc \
+  /usr/include/c++/15.1.1/tr1/ell_integral.tcc \
+  /usr/include/c++/15.1.1/tr1/exp_integral.tcc \
+  /usr/include/c++/15.1.1/tr1/gamma.tcc \
+  /usr/include/c++/15.1.1/tr1/hypergeometric.tcc \
+  /usr/include/c++/15.1.1/tr1/legendre_function.tcc \
+  /usr/include/c++/15.1.1/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/15.1.1/tr1/poly_hermite.tcc \
+  /usr/include/c++/15.1.1/tr1/poly_laguerre.tcc \
+  /usr/include/c++/15.1.1/tr1/riemann_zeta.tcc \
+  /usr/include/c++/15.1.1/tr1/special_function_util.h \
   /usr/include/c++/15.1.1/tuple \
   /usr/include/c++/15.1.1/type_traits \
+  /usr/include/c++/15.1.1/typeindex \
   /usr/include/c++/15.1.1/typeinfo \
   /usr/include/c++/15.1.1/unordered_map \
   /usr/include/c++/15.1.1/utility \
@@ -829,7 +915,10 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -838,6 +927,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
@@ -852,6 +942,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/linux/types.h \
   /usr/include/linux/version.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/net/if.h \
   /usr/include/netdb.h \
   /usr/include/netinet/in.h \
@@ -939,11 +1030,15 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o: /home/v01d/Documents/Programming/Perso
   /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/emmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/xmmintrin.h
 
 CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio.hpp \
@@ -1362,6 +1457,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/write_at.hpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces/IByteCaveServer.h \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h \
+  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -1398,15 +1494,25 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/bits/fcntl.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
   /usr/include/bits/getopt_core.h \
   /usr/include/bits/getopt_posix.h \
   /usr/include/bits/in.h \
   /usr/include/bits/ioctl-types.h \
   /usr/include/bits/ioctls.h \
+  /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls-narrow.h \
+  /usr/include/bits/mathcalls.h \
   /usr/include/bits/netdb.h \
   /usr/include/bits/poll.h \
   /usr/include/bits/posix1_lim.h \
@@ -1509,6 +1615,56 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/cxx_composite.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/uuid.hpp \
+  /usr/include/boost/uuid/basic_random_generator.hpp \
+  /usr/include/boost/uuid/detail/basic_name_generator.hpp \
+  /usr/include/boost/uuid/detail/chacha20.hpp \
+  /usr/include/boost/uuid/detail/config.hpp \
+  /usr/include/boost/uuid/detail/endian.hpp \
+  /usr/include/boost/uuid/detail/hash_mix.hpp \
+  /usr/include/boost/uuid/detail/md5.hpp \
+  /usr/include/boost/uuid/detail/numeric_cast.hpp \
+  /usr/include/boost/uuid/detail/random_device.hpp \
+  /usr/include/boost/uuid/detail/random_provider.hpp \
+  /usr/include/boost/uuid/detail/sha1.hpp \
+  /usr/include/boost/uuid/detail/static_assert.hpp \
+  /usr/include/boost/uuid/detail/to_chars.hpp \
+  /usr/include/boost/uuid/detail/uuid_x86.ipp \
+  /usr/include/boost/uuid/name_generator.hpp \
+  /usr/include/boost/uuid/name_generator_md5.hpp \
+  /usr/include/boost/uuid/name_generator_sha1.hpp \
+  /usr/include/boost/uuid/namespaces.hpp \
+  /usr/include/boost/uuid/nil_generator.hpp \
+  /usr/include/boost/uuid/random_generator.hpp \
+  /usr/include/boost/uuid/string_generator.hpp \
+  /usr/include/boost/uuid/time_generator.hpp \
+  /usr/include/boost/uuid/time_generator_v1.hpp \
+  /usr/include/boost/uuid/time_generator_v6.hpp \
+  /usr/include/boost/uuid/time_generator_v7.hpp \
+  /usr/include/boost/uuid/uuid.hpp \
+  /usr/include/boost/uuid/uuid_clock.hpp \
+  /usr/include/boost/uuid/uuid_generators.hpp \
+  /usr/include/boost/uuid/uuid_io.hpp \
   /usr/include/c++/15.1.1/algorithm \
   /usr/include/c++/15.1.1/any \
   /usr/include/c++/15.1.1/array \
@@ -1531,6 +1687,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/bits/char_traits.h \
   /usr/include/c++/15.1.1/bits/charconv.h \
   /usr/include/c++/15.1.1/bits/chrono.h \
+  /usr/include/c++/15.1.1/bits/codecvt.h \
   /usr/include/c++/15.1.1/bits/concept_check.h \
   /usr/include/c++/15.1.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
@@ -1550,8 +1707,11 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/bits/istream.tcc \
   /usr/include/c++/15.1.1/bits/locale_classes.h \
   /usr/include/c++/15.1.1/bits/locale_classes.tcc \
+  /usr/include/c++/15.1.1/bits/locale_conv.h \
   /usr/include/c++/15.1.1/bits/locale_facets.h \
   /usr/include/c++/15.1.1/bits/locale_facets.tcc \
+  /usr/include/c++/15.1.1/bits/locale_facets_nonio.h \
+  /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
   /usr/include/c++/15.1.1/bits/localefwd.h \
   /usr/include/c++/15.1.1/bits/memory_resource.h \
   /usr/include/c++/15.1.1/bits/memoryfwd.h \
@@ -1566,12 +1726,15 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/bits/postypes.h \
   /usr/include/c++/15.1.1/bits/predefined_ops.h \
   /usr/include/c++/15.1.1/bits/ptr_traits.h \
+  /usr/include/c++/15.1.1/bits/random.h \
+  /usr/include/c++/15.1.1/bits/random.tcc \
   /usr/include/c++/15.1.1/bits/range_access.h \
   /usr/include/c++/15.1.1/bits/refwrap.h \
   /usr/include/c++/15.1.1/bits/requires_hosted.h \
   /usr/include/c++/15.1.1/bits/shared_ptr.h \
   /usr/include/c++/15.1.1/bits/shared_ptr_atomic.h \
   /usr/include/c++/15.1.1/bits/shared_ptr_base.h \
+  /usr/include/c++/15.1.1/bits/specfun.h \
   /usr/include/c++/15.1.1/bits/sstream.tcc \
   /usr/include/c++/15.1.1/bits/std_abs.h \
   /usr/include/c++/15.1.1/bits/std_function.h \
@@ -1586,6 +1749,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/bits/stl_iterator.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.1.1/bits/stl_numeric.h \
   /usr/include/c++/15.1.1/bits/stl_pair.h \
   /usr/include/c++/15.1.1/bits/stl_raw_storage_iter.h \
   /usr/include/c++/15.1.1/bits/stl_relops.h \
@@ -1612,6 +1776,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/chrono \
   /usr/include/c++/15.1.1/climits \
   /usr/include/c++/15.1.1/clocale \
+  /usr/include/c++/15.1.1/cmath \
   /usr/include/c++/15.1.1/compare \
   /usr/include/c++/15.1.1/concepts \
   /usr/include/c++/15.1.1/condition_variable \
@@ -1643,23 +1808,41 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/istream \
   /usr/include/c++/15.1.1/iterator \
   /usr/include/c++/15.1.1/limits \
+  /usr/include/c++/15.1.1/locale \
   /usr/include/c++/15.1.1/memory \
   /usr/include/c++/15.1.1/mutex \
   /usr/include/c++/15.1.1/new \
+  /usr/include/c++/15.1.1/numeric \
   /usr/include/c++/15.1.1/ostream \
   /usr/include/c++/15.1.1/pstl/execution_defs.h \
   /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15.1.1/pstl/glue_memory_defs.h \
+  /usr/include/c++/15.1.1/pstl/glue_numeric_defs.h \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
+  /usr/include/c++/15.1.1/random \
   /usr/include/c++/15.1.1/ratio \
   /usr/include/c++/15.1.1/sstream \
   /usr/include/c++/15.1.1/stdexcept \
+  /usr/include/c++/15.1.1/stdlib.h \
   /usr/include/c++/15.1.1/streambuf \
   /usr/include/c++/15.1.1/string \
   /usr/include/c++/15.1.1/string_view \
   /usr/include/c++/15.1.1/system_error \
+  /usr/include/c++/15.1.1/tr1/bessel_function.tcc \
+  /usr/include/c++/15.1.1/tr1/beta_function.tcc \
+  /usr/include/c++/15.1.1/tr1/ell_integral.tcc \
+  /usr/include/c++/15.1.1/tr1/exp_integral.tcc \
+  /usr/include/c++/15.1.1/tr1/gamma.tcc \
+  /usr/include/c++/15.1.1/tr1/hypergeometric.tcc \
+  /usr/include/c++/15.1.1/tr1/legendre_function.tcc \
+  /usr/include/c++/15.1.1/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/15.1.1/tr1/poly_hermite.tcc \
+  /usr/include/c++/15.1.1/tr1/poly_laguerre.tcc \
+  /usr/include/c++/15.1.1/tr1/riemann_zeta.tcc \
+  /usr/include/c++/15.1.1/tr1/special_function_util.h \
   /usr/include/c++/15.1.1/tuple \
   /usr/include/c++/15.1.1/type_traits \
+  /usr/include/c++/15.1.1/typeindex \
   /usr/include/c++/15.1.1/typeinfo \
   /usr/include/c++/15.1.1/unordered_map \
   /usr/include/c++/15.1.1/utility \
@@ -1675,7 +1858,10 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/opt_random.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -1684,6 +1870,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
@@ -1698,6 +1885,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/linux/types.h \
   /usr/include/linux/version.h \
   /usr/include/locale.h \
+  /usr/include/math.h \
   /usr/include/net/if.h \
   /usr/include/netdb.h \
   /usr/include/netinet/in.h \
@@ -1733,20 +1921,26 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
   /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/emmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/limits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mm_malloc.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mmintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/xmmintrin.h
 
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/xmmintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/emmintrin.h:
 
 /usr/include/wctype.h:
 
 /usr/include/wchar.h:
-
-/usr/include/unistd.h:
 
 /usr/include/time.h:
 
@@ -1782,8 +1976,6 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/qt/QtCore/qscopedpointer.h:
 
-/usr/include/qt/QtCore/qregexp.h:
-
 /usr/include/qt/QtCore/qobject.h:
 
 /usr/include/qt/QtCore/qlogging.h:
@@ -1818,8 +2010,6 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/qt/QtCore/qbasicatomic.h:
 
-/usr/include/qt/QtCore/qatomic_cxx11.h:
-
 /usr/include/qt/QtCore/qatomic.h:
 
 /usr/include/qt/QtCore/qarraydata.h:
@@ -1832,11 +2022,11 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/poll.h:
 
-/usr/include/netinet/tcp.h:
-
 /usr/include/sched.h:
 
 /usr/include/netdb.h:
+
+/usr/include/math.h:
 
 /usr/include/qt/QtCore/qalgorithms.h:
 
@@ -1851,6 +2041,8 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 /usr/include/sys/socket.h:
 
 /usr/include/limits.h:
+
+/usr/include/libintl.h:
 
 /usr/include/gnu/stubs.h:
 
@@ -1884,13 +2076,25 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/unordered_map:
 
+/usr/include/c++/15.1.1/typeindex:
+
 /usr/include/c++/15.1.1/vector:
 
 /usr/include/c++/15.1.1/tuple:
 
+/usr/include/c++/15.1.1/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/15.1.1/tr1/poly_hermite.tcc:
+
+/usr/include/c++/15.1.1/tr1/hypergeometric.tcc:
+
+/usr/include/c++/15.1.1/tr1/exp_integral.tcc:
+
 /usr/include/c++/15.1.1/string_view:
 
 /usr/include/c++/15.1.1/sstream:
+
+/usr/include/c++/15.1.1/random:
 
 /usr/include/c++/15.1.1/pstl/glue_numeric_defs.h:
 
@@ -1902,7 +2106,9 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/map:
 
-/usr/include/c++/15.1.1/list:
+/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/opt_random.h:
+
+/usr/include/c++/15.1.1/locale:
 
 /usr/include/c++/15.1.1/initializer_list:
 
@@ -1930,6 +2136,8 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/compare:
 
+/usr/include/c++/15.1.1/cmath:
+
 /usr/include/c++/15.1.1/climits:
 
 /usr/include/c++/15.1.1/chrono:
@@ -1946,9 +2154,9 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/bits/unique_ptr.h:
 
-/usr/include/c++/15.1.1/bits/unique_lock.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mmintrin.h:
 
-/usr/include/c++/15.1.1/bits/stringfwd.h:
+/usr/include/c++/15.1.1/bits/unique_lock.h:
 
 /usr/include/c++/15.1.1/bits/string_view.tcc:
 
@@ -1961,8 +2169,6 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
 /usr/include/c++/15.1.1/bits/stl_uninitialized.h:
-
-/usr/include/c++/15.1.1/bits/stl_tree.h:
 
 /usr/include/c++/15.1.1/bits/stl_tempbuf.h:
 
@@ -1984,6 +2190,8 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/bits/stl_heap.h:
 
+/usr/include/c++/15.1.1/tr1/poly_laguerre.tcc:
+
 /usr/include/c++/15.1.1/pstl/pstl_config.h:
 
 /usr/include/c++/15.1.1/bits/stl_construct.h:
@@ -1998,11 +2206,11 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/bits/sstream.tcc:
 
+/usr/include/c++/15.1.1/bits/specfun.h:
+
 /usr/include/c++/15.1.1/bits/shared_ptr_base.h:
 
 /usr/include/c++/15.1.1/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/15.1.1/bits/requires_hosted.h:
 
 /usr/include/c++/15.1.1/bits/ptr_traits.h:
 
@@ -2019,6 +2227,14 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 /usr/include/c++/15.1.1/bits/memory_resource.h:
 
 /usr/include/c++/15.1.1/bits/localefwd.h:
+
+/usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/15.1.1/bits/locale_facets_nonio.h:
+
+/usr/include/c++/15.1.1/bits/requires_hosted.h:
+
+/usr/include/c++/15.1.1/bits/locale_conv.h:
 
 /usr/include/c++/15.1.1/bits/hashtable.h:
 
@@ -2042,6 +2258,8 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/bits/concept_check.h:
 
+/usr/include/c++/15.1.1/bits/codecvt.h:
+
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/15.1.1/bits/shared_ptr.h:
@@ -2056,8 +2274,6 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/c++/15.1.1/bits/basic_ios.h:
 
-/usr/include/c++/15.1.1/bits/atomic_lockfree_defines.h:
-
 /usr/include/c++/15.1.1/bits/allocator.h:
 
 /usr/include/c++/15.1.1/istream:
@@ -2071,6 +2287,86 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 /usr/include/c++/15.1.1/array:
 
 /usr/include/c++/15.1.1/any:
+
+/usr/include/boost/uuid/uuid_io.hpp:
+
+/usr/include/boost/uuid/uuid_generators.hpp:
+
+/usr/include/boost/uuid/uuid.hpp:
+
+/usr/include/c++/15.1.1/list:
+
+/usr/include/boost/uuid/time_generator_v7.hpp:
+
+/usr/include/boost/uuid/time_generator_v6.hpp:
+
+/usr/include/boost/uuid/time_generator_v1.hpp:
+
+/usr/include/netinet/tcp.h:
+
+/usr/include/boost/uuid/time_generator.hpp:
+
+/usr/include/boost/uuid/string_generator.hpp:
+
+/usr/include/boost/uuid/nil_generator.hpp:
+
+/usr/include/boost/uuid/namespaces.hpp:
+
+/usr/include/boost/uuid/name_generator_sha1.hpp:
+
+/usr/include/boost/uuid/name_generator_md5.hpp:
+
+/usr/include/boost/uuid/detail/to_chars.hpp:
+
+/usr/include/c++/15.1.1/bits/atomic_lockfree_defines.h:
+
+/usr/include/boost/uuid/detail/sha1.hpp:
+
+/usr/include/boost/uuid/detail/random_device.hpp:
+
+/usr/include/boost/uuid/detail/numeric_cast.hpp:
+
+/usr/include/boost/uuid/detail/hash_mix.hpp:
+
+/usr/include/boost/uuid/detail/config.hpp:
+
+/usr/include/boost/uuid/detail/basic_name_generator.hpp:
+
+/usr/include/boost/uuid/basic_random_generator.hpp:
+
+/usr/include/boost/uuid.hpp:
+
+/usr/include/boost/throw_exception.hpp:
+
+/usr/include/unistd.h:
+
+/usr/include/boost/exception/exception.hpp:
+
+/usr/include/boost/detail/workaround.hpp:
+
+/usr/include/boost/cstdint.hpp:
+
+/usr/include/boost/config/user.hpp:
+
+/usr/include/c++/15.1.1/bits/stringfwd.h:
+
+/usr/include/boost/config/helper_macros.hpp:
+
+/usr/include/boost/config/detail/suffix.hpp:
+
+/usr/include/boost/config/detail/select_stdlib_config.hpp:
+
+/usr/include/boost/config/detail/select_platform_config.hpp:
+
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
+/usr/include/c++/15.1.1/bits/stl_tree.h:
+
+/usr/include/boost/config/compiler/gcc.hpp:
+
+/usr/include/qt/QtCore/qatomic_cxx11.h:
+
+/usr/include/boost/assert/source_location.hpp:
 
 /usr/include/bits/xopen_lim.h:
 
@@ -2113,6 +2409,8 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/include/bits/types/stack_t.h:
+
+/usr/include/boost/config.hpp:
 
 /usr/include/bits/types/sigval_t.h:
 
@@ -2216,11 +2514,35 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /usr/include/bits/poll.h:
 
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathcalls-narrow.h:
+
+/usr/include/qt/QtCore/qregexp.h:
+
+/usr/include/bits/mathcalls-macros.h:
+
+/usr/include/bits/math-vector.h:
+
 /usr/include/c++/15.1.1/stdexcept:
 
 /usr/include/bits/long-double.h:
 
 /usr/include/bits/locale.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/bits/libc-header-start.h:
+
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/ioctl-types.h:
+
+/usr/include/bits/socket.h:
+
+/usr/include/bits/in.h:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/reactor_op.hpp:
 
@@ -2258,6 +2580,8 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_socket_acceptor.hpp:
 
+/usr/include/c++/15.1.1/tr1/gamma.tcc:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/operation.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h:
@@ -2284,11 +2608,19 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o: /home/v01d/Document
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/traits/query_member.hpp:
 
+/usr/include/c++/15.1.1/tr1/bessel_function.tcc:
+
+/usr/include/bits/ioctls.h:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/io_control.hpp:
+
 /usr/include/bits/termios.h:
 
 CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/initiate_post.hpp:
+
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
 /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake:
 
@@ -2316,6 +2648,8 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/impl/posix_thread.ipp:
 
+/usr/include/boost/config/detail/cxx_composite.hpp:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/buffered_stream_fwd.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/bind_cancellation_slot.hpp:
@@ -2323,16 +2657,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/thread_pool.hpp:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/resolve_endpoint_op.hpp:
-
-/usr/include/c++/15.1.1/bits/std_thread.h:
-
-/usr/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/execution/occupancy.hpp:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/this_coro.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/execution/blocking_adaptation.hpp:
 
@@ -2377,6 +2701,8 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/connect_pipe.ipp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/posix_thread.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h:
 
 /usr/include/c++/15.1.1/type_traits:
 
@@ -2440,6 +2766,8 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/base_from_completion_cond.hpp:
 
+/usr/include/boost/type_traits/integral_constant.hpp:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/base_from_cancellation_state.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/buffer_registration.hpp:
@@ -2466,8 +2794,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/mutex.hpp:
 
-/usr/include/bits/local_lim.h:
-
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/deadline_timer.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/impl/strand_executor_service.ipp:
@@ -2492,19 +2818,21 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/cancellation_signal.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/libgcc.a:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/fenced_block.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/local_free_on_block_exit.hpp:
+
+/usr/lib/libm.so:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/conditionally_enabled_event.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/socket_ops.hpp:
 
 /usr/lib/libglib-2.0.so.0:
 
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/local_free_on_block_exit.hpp:
-
-/usr/lib/libm.so:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/libgcc.a:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/fenced_block.hpp:
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h:
 
 /usr/include/c++/15.1.1/bits/list.tcc:
 
@@ -2526,9 +2854,9 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/async_result.hpp:
 
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/posix_mutex.hpp:
+/usr/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
 
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/registered_buffer.hpp:
+/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake:
 
 /usr/include/c++/15.1.1/numeric:
 
@@ -2537,16 +2865,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_stream_socket.hpp:
 
 /usr/share/cmake/Modules/Platform/Linux-GNU.cmake:
-
-/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake:
-
-/usr/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
-
-/usr/lib/libdouble-conversion.so.3:
-
-/usr/include/bits/uio-ext.h:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/compose.hpp:
 
@@ -2564,10 +2882,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces/IByteCaveServer.h:
 
-/usr/include/linux/stddef.h:
-
-/usr/lib/libmvec.so.1:
-
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/CMakeLists.txt:
 
 /usr/include/c++/15.1.1/cerrno:
@@ -2576,9 +2890,43 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_seq_packet_socket.hpp:
 
+/usr/share/cmake/Modules/GNUInstallDirs.cmake:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/reactive_socket_recvmsg_op.hpp:
+
+/usr/lib/libstdc++.so:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/conditionally_enabled_mutex.hpp:
+
+/usr/lib/cmake/Qt5/Qt5Config.cmake:
+
+/usr/include/c++/15.1.1/cassert:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/version.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/buffer_sequence_adapter.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/defer.hpp:
+
+/usr/share/cmake/Modules/Linker/GNU-CXX.cmake:
+
 /usr/include/sys/types.h:
 
 /usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake:
+
+/usr/include/bits/unistd_ext.h:
+
+/usr/share/cmake/Modules/CMakeParseArguments.cmake:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/io_context.ipp:
+
+/usr/lib/libQt5Core.so.5.15.17:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/basic_resolver_results.hpp:
+
+/usr/include/c++/15.1.1/tr1/special_function_util.h:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/impl/network_v4.ipp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_stream_file.hpp:
 
@@ -2590,9 +2938,7 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/object_pool.hpp:
 
-/usr/include/bits/eventfd.h:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_streambuf_fwd.hpp:
+/usr/include/boost/config/detail/posix_features.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/buffered_write_stream_fwd.hpp:
 
@@ -2601,6 +2947,16 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /usr/include/linux/stat.h:
 
 /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
+
+/usr/include/c++/15.1.1/bits/std_thread.h:
+
+/usr/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/resolve_endpoint_op.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/execution/occupancy.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/this_coro.hpp:
 
 /usr/include/c++/15.1.1/bits/invoke.h:
 
@@ -2612,31 +2968,11 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/lib/libzstd.so.1:
 
+/usr/include/boost/uuid/detail/random_provider.hpp:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/timer_queue_set.hpp:
 
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/conditionally_enabled_mutex.hpp:
-
-/usr/lib/cmake/Qt5/Qt5Config.cmake:
-
-/usr/include/c++/15.1.1/cassert:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/version.hpp:
-
-/usr/lib/libQt5Core.so.5.15.17:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/basic_resolver_results.hpp:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/impl/network_v4.ipp:
-
-/usr/include/bits/unistd_ext.h:
-
-/usr/share/cmake/Modules/CMakeParseArguments.cmake:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/io_context.ipp:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/reactive_socket_recvmsg_op.hpp:
-
-/usr/lib/libstdc++.so:
+/usr/include/boost/assert.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/reactive_socket_recv_op.hpp:
 
@@ -2654,11 +2990,15 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/consign.hpp:
 
+/usr/include/bits/uio-ext.h:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp:
+
+/usr/include/c++/15.1.1/tr1/modified_bessel_func.tcc:
+
+/usr/lib/libdouble-conversion.so.3:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/associated_cancellation_slot.hpp:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/regex_fwd.hpp:
-
-/usr/share/cmake/Modules/Platform/Linux.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/traits/static_query.hpp:
 
@@ -2672,11 +3012,13 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/lib/libsystemd.so.0:
 
+/usr/include/boost/uuid/detail/chacha20.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_streambuf_fwd.hpp:
+
+/usr/include/bits/eventfd.h:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/impl/reactive_socket_service_base.ipp:
-
-/usr/include/c++/15.1.1/bits/streambuf_iterator.h:
-
-/usr/lib/libc.so.6:
 
 /usr/include/c++/15.1.1/iosfwd:
 
@@ -2698,6 +3040,12 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake:
 
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/null_event.hpp:
+
+.qtc/package-manager/auto-setup.cmake:
+
+/usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake:
+
 /usr/include/netinet/in.h:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/impl/scheduler.ipp:
@@ -2716,15 +3064,17 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/main.cpp:
 
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/posix_mutex.hpp:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/registered_buffer.hpp:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/associator.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/reactive_socket_sendto_op.hpp:
 
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/null_event.hpp:
-
-.qtc/package-manager/auto-setup.cmake:
-
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/eventfd_select_interrupter.hpp:
+
+/usr/include/boost/uuid/name_generator.hpp:
 
 /usr/include/bits/posix2_lim.h:
 
@@ -2779,16 +3129,6 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/system_executor.hpp:
 
 /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake:
-
-/usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/buffer_sequence_adapter.hpp:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/defer.hpp:
-
-/usr/share/cmake/Modules/Linker/GNU-CXX.cmake:
-
-/usr/share/cmake/Modules/GNUInstallDirs.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/basic_writable_pipe.hpp:
 
@@ -2952,6 +3292,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /usr/include/arpa/inet.h:
 
+/usr/include/c++/15.1.1/tr1/ell_integral.tcc:
+
 /usr/lib32/libcap.so.2:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/writable_pipe.hpp:
@@ -3010,6 +3352,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/bind_immediate_executor.hpp:
 
+/usr/include/c++/15.1.1/tr1/legendre_function.tcc:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/execution/blocking.hpp:
 
 /usr/include/c++/15.1.1/limits:
@@ -3021,6 +3365,10 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/assert.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/buffered_read_stream.hpp:
+
+/usr/share/cmake/Modules/Platform/Linux.cmake:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/regex_fwd.hpp:
 
 /usr/include/c++/15.1.1/memory:
 
@@ -3046,15 +3394,13 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/scheduler_operation.hpp:
 
-/usr/include/bits/socket.h:
-
-/usr/include/bits/in.h:
-
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/scheduler_thread_info.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/scoped_ptr.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/consign.hpp:
+
+/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/messages_members.h:
 
 /usr/lib/libcap.so.2:
 
@@ -3116,6 +3462,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/15.1.1/bits/memoryfwd.h:
 
+/usr/include/boost/uuid/detail/md5.hpp:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/utility.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/wait_handler.hpp:
@@ -3172,7 +3520,7 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/execution/executor.hpp:
 
-/usr/include/bits/ioctl-types.h:
+/usr/include/boost/uuid/uuid_clock.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/execution/impl/bad_executor.ipp:
 
@@ -3242,6 +3590,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/as_tuple.hpp:
 
+/usr/include/boost/uuid/detail/uuid_x86.ipp:
+
 /usr/lib/libgcc_s.so:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/connect.hpp:
@@ -3264,6 +3614,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/error_code.ipp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mm_malloc.h:
+
 /usr/include/c++/15.1.1/bits/uniform_int_dist.h:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/executor.ipp:
@@ -3275,6 +3627,12 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/io_context.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/thread.hpp:
+
+/usr/include/linux/stddef.h:
+
+/usr/lib/libmvec.so.1:
+
+/usr/include/bits/fp-logb.h:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/impl/posix_mutex.ipp:
 
@@ -3310,6 +3668,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/traits/require_member.hpp:
 
+/usr/include/c++/15.1.1/bits/random.h:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/strand_executor_service.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/thread_pool.ipp:
@@ -3323,6 +3683,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/impl/write_at.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/io_context.hpp:
+
+/usr/include/c++/15.1.1/tr1/beta_function.tcc:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/io_context_strand.hpp:
 
@@ -3390,6 +3752,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/traits/static_require_concept.hpp:
 
+/usr/include/boost/uuid/detail/endian.hpp:
+
 /usr/share/cmake/Modules/Linker/GNU.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/basic_resolver_iterator.hpp:
@@ -3418,9 +3782,13 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/resolver_base.hpp:
 
+/usr/include/boost/uuid/detail/static_assert.hpp:
+
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/scoped_lock.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/ip/tcp.hpp:
+
+/usr/include/boost/config/platform/linux.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/wait_traits.hpp:
 
@@ -3431,6 +3799,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/impl/posix_serial_port_service.ipp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/is_contiguous_iterator.hpp:
+
+/usr/include/boost/config/workaround.hpp:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/any_completion_handler.hpp:
 
@@ -3530,7 +3900,11 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/use_future.hpp:
 
+/usr/include/bits/mathcalls-helper-functions.h:
+
 /usr/include/asm/socket.h:
+
+/usr/include/c++/15.1.1/bits/random.tcc:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/io_service_strand.hpp:
 
@@ -3561,6 +3935,8 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /usr/include/sys/uio.h:
 
 /usr/include/asm-generic/ioctl.h:
+
+/usr/include/boost/uuid/random_generator.hpp:
 
 /usr/include/asm-generic/ioctls.h:
 
@@ -3604,10 +3980,14 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 
 /usr/include/bits/floatn.h:
 
+/usr/include/bits/flt-eval-method.h:
+
+/usr/include/c++/15.1.1/bits/streambuf_iterator.h:
+
+/usr/lib/libc.so.6:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h:
+
 /usr/include/bits/getopt_posix.h:
-
-/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/detail/io_control.hpp:
-
-/usr/include/bits/ioctls.h:
-
-/usr/include/bits/libc-header-start.h:

@@ -7,6 +7,8 @@ ByteCaveServer_autogen/timestamp: \
 	/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/main.cpp \
 	/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp \
 	/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h \
+	/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h \
+	/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h \
 	/usr/lib/cmake/Qt5/Qt5Config.cmake \
 	/usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
 	/usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake \

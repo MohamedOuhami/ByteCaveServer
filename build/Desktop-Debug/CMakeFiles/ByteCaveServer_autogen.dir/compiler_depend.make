@@ -9,6 +9,8 @@ ByteCaveServer_autogen/timestamp: /home/v01d/Documents/Programming/PersonalProje
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/main.cpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp \
   /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h \
+  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h \
+  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h \
   /usr/bin/cmake \
   /usr/lib/cmake/Qt5/Qt5Config.cmake \
   /usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
@@ -44,8 +46,6 @@ ByteCaveServer_autogen/timestamp: /home/v01d/Documents/Programming/PersonalProje
   /usr/share/cmake/Modules/Platform/UnixPaths.cmake
 
 
-/usr/share/cmake/Modules/Platform/UnixPaths.cmake:
-
 /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake:
 
 /usr/share/cmake/Modules/Platform/Linux-GNU.cmake:
@@ -56,17 +56,23 @@ ByteCaveServer_autogen/timestamp: /home/v01d/Documents/Programming/PersonalProje
 
 /usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake:
 
+/usr/share/cmake/Modules/GNUInstallDirs.cmake:
+
+/usr/share/cmake/Modules/Compiler/GNU.cmake:
+
 /usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake:
 
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h:
+
 /usr/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
+
+/usr/lib/cmake/Qt5/Qt5Config.cmake:
 
 /usr/share/cmake/Modules/Platform/Linker/Linux-GNU-CXX.cmake:
 
 /usr/share/cmake/Modules/Linker/GNU.cmake:
 
 /usr/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:
-
-/usr/lib/cmake/Qt5/Qt5Config.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.cpp:
 
@@ -82,17 +88,21 @@ CMakeFiles/4.0.3-dirty/CMakeSystem.cmake:
 
 /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces/IByteCaveServer.h:
 
-/usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake:
+CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
+
+.qtc/package-manager/auto-setup.cmake:
 
 /usr/bin/cmake:
+
+/usr/share/cmake/Modules/Platform/UnixPaths.cmake:
+
+/home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h:
+
+/usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake:
 
 /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake:
 
 /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake:
-
-CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
-
-.qtc/package-manager/auto-setup.cmake:
 
 /usr/share/cmake/Modules/Platform/Linux.cmake:
 
@@ -121,7 +131,3 @@ CMakeFiles/4.0.3-dirty/CMakeCXXCompiler.cmake:
 /usr/share/cmake/Modules/Platform/Linker/Linux-GNU.cmake:
 
 /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
-
-/usr/share/cmake/Modules/Compiler/GNU.cmake:
-
-/usr/share/cmake/Modules/GNUInstallDirs.cmake:
