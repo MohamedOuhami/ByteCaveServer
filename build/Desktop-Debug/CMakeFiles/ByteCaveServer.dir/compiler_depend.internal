@@ -511,6 +511,7 @@ CMakeFiles/ByteCaveServer.dir/main.cpp.o
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/write_at.hpp
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces/IByteCaveServer.h
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h
+ /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h
  /home/v01d/dev/libs/include/json/include/nlohmann/adl_serializer.hpp
  /home/v01d/dev/libs/include/json/include/nlohmann/byte_container_with_subtype.hpp
@@ -1530,6 +1531,7 @@ CMakeFiles/ByteCaveServer.dir/services/bytecaveserver.cpp.o
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/include/asio/asio/write_at.hpp
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/interfaces/IByteCaveServer.h
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/services/bytecaveserver.h
+ /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/Chatroom.h
  /home/v01d/Documents/Programming/PersonalProjects/ByteCaveServer/structs/User.h
  /home/v01d/dev/libs/include/json/include/nlohmann/adl_serializer.hpp
  /home/v01d/dev/libs/include/json/include/nlohmann/byte_container_with_subtype.hpp
